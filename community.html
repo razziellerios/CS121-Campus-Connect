@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Community</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="sticky-header">
+        <h1>Student Community</h1>
+
+        <div style="display: flex; gap: 10px; margin-bottom: 20px; justify-content: center;">
+            <a href="/"><button>Back</button></a>
+            <a href="/logout"><button>Logout</button></a>
+        </div>
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+            <input id="searchTitle" placeholder="Search by title..." oninput="loadPosts()">
+            <select id="filterCategory" onchange="loadPosts()">
+                <option value="">All Categories</option>
+                <option value="Task">Task</option>
+                <option value="Service">Service</option>
+                <option value="Selling">Selling</option>
+            </select>
+        </div>
+
+        <div id="createPostSection">
+            <input id="title" placeholder="Post title">
+
+            <select id="category">
+                <option>Task</option>
+                <option>Service</option>
+                <option>Selling</option>
+            </select>
+
+            <button onclick="addPost()">Add Post</button>
+        </div>
+    </div>
+
+    <ul id="postList"></ul>
+
+    <script src="/js/community.js"></script> <!-- 🆕 separated JS -->
+
+</body>
+
+</html>
